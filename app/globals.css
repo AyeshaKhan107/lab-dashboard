@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+    margin-top: 2in;
+  }
+
+  :root {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+  @media print {
+
+  @page {
+    margin: 0;
+    size: A4;
+  }
+
+  body {
+    margin: 0 !important;
+  }
+
+ 
+@media print {
+  .print-area {
+    margin-top: 2in !important;
+  }
+}
+  .print\\:hidden {
+    display: none !important;
+  }
+}
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: auto;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+
+  .print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    min-height: auto;
+    background: #fff !important;
+    display: block !important;
+    page-break-inside: avoid;
+    break-inside: avoid-page;
+  }
+
+  .print-area table,
+  .print-area tr,
+  .print-area thead,
+  .print-area tbody,
+  .print-area p,
+  .print-area h1,
+  .print-area h2,
+  .print-area h3,
+  .print-area h4,
+  .print-area h5,
+  .print-area h6,
+  .print-area div {
+    page-break-inside: avoid;
+    break-inside: avoid-page;
+  }
+
+  .print-area img,
+  .print-area svg {
+    break-inside: avoid;
+  }
+
+  .no-print,
+  .print-hidden {
+    display: none !important;
+  }
+
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
